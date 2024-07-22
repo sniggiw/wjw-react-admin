@@ -1,12 +1,26 @@
-import { defineConfig } from "vite";
+import { ConfigEnv, defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "node:path";
+import alias from "./vite/alias";
+import { parseEnv } from "./vite/util";
 
-export default defineConfig({
-    plugins: [react()],
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
+// export default defineConfig({
+//     plugins: [react()],
+//     resolve: {
+//         alias,
+//     },
+// });
+
+export default ({ command, mode }: ConfigEnv) => {
+    const isBuild = command === "build";
+    const root = process.cwd();
+    const env = loadEnv(mode, root);
+
+    parseEnv(env);
+
+    return {
+        plugins: [react()],
+        resolve: {
+            alias,
         },
-    },
-});
+    };
+};
