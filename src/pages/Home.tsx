@@ -1,4 +1,3 @@
 export default function Home() {
-    console.log(import.meta.env);
-    return <div>主页 - home...</div>;
+    return <div className="bg-red-500">主页 - home...</div>;
 }
