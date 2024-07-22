@@ -15,7 +15,7 @@ export default ({ command, mode }: ConfigEnv) => {
     const root = process.cwd();
     const env = loadEnv(mode, root);
 
-    parseEnv(env);
+    console.log(parseEnv(env))
 
     return {
         plugins: [react()],
