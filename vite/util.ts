@@ -2,10 +2,10 @@ import _ from 'lodash';
 
 // type Record<K extends keyof any, T> = { [P in K]: T };
 
-export function parseEnv(env: Record<string, any>) {
-    const envs = _.cloneDeep(env);
+export function parseEnv(env: Record<string, any>): ViteEnv {
+    const envs: any = _.cloneDeep(env);
 
-    Object.entries(envs).forEach(([key, value]) => {
+    Object.entries(envs).forEach(([key, value]: any[]) => {
         if (value === 'true' || value === 'false') {
             envs[key] = value === 'true';
         }
