@@ -26,14 +26,5 @@
             "@/*": ["src/*"]
         }
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "vite.config.ts",
-        "vite/**/*.ts",
-        "mock/**/*.ts",
-        "types/**/*.d.ts",
-        "mock/**/*.ts",
-        "types/**/*.d.ts"
-    ]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "vite/**/*.ts", "mock/**/*.ts", "types/**/*.d.ts", "mock/**/*.ts"]
 }
