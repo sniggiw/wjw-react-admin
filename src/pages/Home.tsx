@@ -4,7 +4,7 @@ import userApi from "@/api/userApi";
 export default function Home() {
     const getUserInfo = async () => {
         const response = await userApi.userInfo();
-        console.log(response.data.result.age);
+        console.log(response);
     };
 
     useEffect(() => {
