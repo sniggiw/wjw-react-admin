@@ -3,7 +3,10 @@ import userApi from "@/api/userApi";
 
 export default function Home() {
     const getUserInfo = async () => {
-        const response = await userApi.userInfo();
+        // const response = await userApi.userInfo();
+        // console.log(response);
+
+        const response = await userApi.login();
         console.log(response);
     };
 

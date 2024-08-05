@@ -1,15 +1,26 @@
 import { http } from "@/plugins/axios";
 
-interface TypeUser {
+export interface UserInfo {
     name: string;
     age: number;
 }
 
-async function userInfo() {
-    return http.request<TypeUser>({
-        method: "get",
+export interface Login {
+    token: string;
+}
+
+function userInfo() {
+    return http.request<UserInfo>({
         url: "/userInfo",
+        method: "get",
     });
 }
 
-export default { userInfo };
+function login() {
+    return http.request<Login>({
+        url: "/login",
+        method: "get",
+    });
+}
+
+export default { userInfo, login };
