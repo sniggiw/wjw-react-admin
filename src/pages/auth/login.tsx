@@ -3,8 +3,8 @@ let loginInputStyle =
 
 export default function Login() {
     return (
-        <div className="bg-slate-300 h-screen flex justify-center items-center">
-            <div className="w-[720px] bg-white grid grid-cols-2 rounded-md shadow-md overflow-hidden">
+        <div className="bg-slate-300 h-screen flex justify-center md:items-center items-start p-5 md:p-0">
+            <div className="w-full md:w-[720px] translate-y-32 md:translate-y-0 bg-white md:grid grid-cols-2 rounded-md shadow-md overflow-hidden">
                 <div className="p-6">
                     <h2 className="text-center text-lg text-gray-700 mt-3">用户登录</h2>
                     <div className="mt-5">
@@ -15,13 +15,21 @@ export default function Login() {
                         登录
                     </button>
                     <div className="flex gap-2 justify-center mt-3">
-                        <a href="" className="text-xs text-gray-400 hover:text-gray-600 duration-200">如来佛祖</a>
-                        <a href="" className="text-xs text-gray-400 hover:text-gray-600 duration-200">齐天大圣</a>
-                        <a href="" className="text-xs text-gray-400 hover:text-gray-600 duration-200">观音婆萨</a>
-                        <a href="" className="text-xs text-gray-400 hover:text-gray-600 duration-200">玉皇大帝</a>
+                        <a href="" className="text-xs text-gray-400 hover:text-indigo-700 duration-200">
+                            如来佛祖
+                        </a>
+                        <a href="" className="text-xs text-gray-400 hover:text-indigo-700 duration-200">
+                            齐天大圣
+                        </a>
+                        <a href="" className="text-xs text-gray-400 hover:text-indigo-700 duration-200">
+                            观音婆萨
+                        </a>
+                        <a href="" className="text-xs text-gray-400 hover:text-indigo-700 duration-200">
+                            玉皇大帝
+                        </a>
                     </div>
                 </div>
-                <div>
+                <div className="hidden md:block">
                     <img className="w-full h-80 object-cover" src="/images/login.jpg" alt="login-img" />
                 </div>
             </div>
